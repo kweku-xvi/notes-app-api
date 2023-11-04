@@ -1,0 +1,1 @@
+notes-app-api is a comprehensive and well-documented repository housing the server-side code for a versatile and user-friendly notes application, offering features like authentication, CRUD operations for notes, and RESTful API endpoints, built using the django rest framework
