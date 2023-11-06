@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .serializers import RegisterUserSerializer, LoginUserSerializer, UserSerializer
-from .models import UserModel
+from .models import User
 from  django.contrib.auth import authenticate
 from rest_framework import response, status, permissions
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
@@ -45,7 +45,7 @@ def user_login(request):
 @api_view(['GET'])
 @authentication_classes([])
 def get_all_users_view(request):
-    users = UserModel.objects.all()
+    users = User.objects.all()
 
     serializer = UserSerializer(users, many=True)
 
